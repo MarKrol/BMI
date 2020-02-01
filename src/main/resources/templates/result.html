@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI - Body Mass Index</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+
+</head>
+
+<body>
+
+<br>
+<div id="header" class="header" >
+    <br><h2 class="header">B</h2>
+    <p class="header">ody</p>
+    <h2 class="header">&nbsp;M</h2>
+    <p class="header">ass</p>
+    <h2 class="header">&nbsp;I</h2>
+    <p class="header">ndex</p>
+</div>
+<div id="nav_content">
+    <div id="nav">
+        <h1 class="nav">Main Menu</h1><hr class="nav">
+        <p class="nav"><a href="calculator" id="calculator">Oblicz BMI</a></p><hr class="nav">
+        <p class="nav"><a href="find" id="find">Wyszukaj BMI</a></p><hr class="nav">
+        <p class="nav"><a th:href="index" id="index">Strona główna</a></p><hr class="nav">
+    </div>
+    <div id="content">
+        <h1 class="content">Kalkulator BMI</h1><hr class="nav">
+
+        <p class="showresult" style="font-size: 15px"><b><u>Twój wynik:</u></b></p>
+        <table border="0">
+            <tr>
+                <td><p class="showresult"><b>ID w bazie: </b></p></td>
+                <td><p class="showresult" th:text="${list.get(list.size()-1).getId()}"></p></td>
+            </tr>
+            <tr>
+                <td><p class="showresult"><b>Płeć: </b></p></td>
+                <td><p class="showresult" th:if="${list.get(list.size()-1).getSex() eq 'K'}">kobieta</p>
+                    <p class="showresult" th:if="${list.get(list.size()-1).getSex() eq 'M'}">mężczyna</p></td>
+            </tr>
+            <tr>
+                <td><p class="showresult"><b>Masa ciała [kg]: </b></p></td>
+                <td><p class="showresult" th:text="${list.get(list.size()-1).getMass()}"></p></td>
+            </tr>
+            <tr>
+                <td><p class="showresult"><b>Wzrost [cm]: </b></p></td>
+                <td><p class="showresult" th:text="${list.get(list.size()-1).getHeight()}"></p></td>
+            </tr>
+            <tr>
+                <td><p class="showresult"><b>Wiek [lata]: </b></p></td>
+                <td><p class="showresult" th:text="${list.get(list.size()-1).getAge()}"></p></td>
+            </tr>
+            <tr>
+                <td><p class="showresult"><b>BMI: </b></p></td>
+                <td><p class="showresult" th:text="${list.get(list.size()-1).getBmi()}"></p></td>
+            </tr>
+            <tr>
+                <td><p class="showresult"><b>BMI wskazuje na: </b></p></td>
+                <td><p class="showresult" th:text="${discussionresult}"></p></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="footer" class="footer">
+    <br><br><p class="footer"><b>Copyright 2019©. Wszelkie prawa zastrzeżone.</b></p>
+</div>
+
+</body>
+</html>

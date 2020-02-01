@@ -1,0 +1,13 @@
+package pl.camp.it;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import pl.camp.it.utils.DBBMI;
+import sun.security.pkcs11.Secmod;
+
+@SpringBootApplication
+public class App {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class,args);
+    }
+}

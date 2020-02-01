@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI - Body Mass Index</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+
+</head>
+
+<body>
+
+<br>
+<div id="header" class="header" >
+    <br><h2 class="header">B</h2>
+    <p class="header">ody</p>
+    <h2 class="header">&nbsp;M</h2>
+    <p class="header">ass</p>
+    <h2 class="header">&nbsp;I</h2>
+    <p class="header">ndex</p>
+</div>
+<div id="nav_content">
+    <div id="nav">
+        <h1 class="nav">Main Menu</h1><hr class="nav">
+        <p class="nav"><a href="calculator" id="calculator">Oblicz BMI</a></p><hr class="nav">
+        <p class="nav"><a href="find" id="find">Wyszukaj BMI</a></p><hr class="nav">
+        <p class="nav"><a th:href="index" id="index">Strona główna</a></p><hr class="nav">
+    </div>
+    <div id="content">
+        <h1 class="content">Kalkulator BMI</h1><hr class="nav">
+
+        <p class="contentBMI"><b>Oblicz swój wskaźnik BMI.*</b></p>
+
+        <p class="BMI" style="display: inline"><b>Płeć</b>:</p>
+
+        <form action="/calculator" method="post">
+            <label class="radio">
+                <input type="Radio" id="R1" name="sex" value="K"checked>
+                Kobieta
+            </label>
+
+            <label class="radio">
+                <input type="Radio" id="R2" name="sex" value="M">
+                Mężczyzna
+            </label><br><br>
+
+            <p class="BMI" style="display: inline"><b>Masa ciała:</b></p>
+            <input type="text" placeholder="Masa ciała" name="mass" size="15">
+            <p class="BMI" style="display: inline"><b>[kg]</b></p><br><br>
+
+            <p class="BMI" style="display: inline"><b>Wzrost: </b></p>
+            <input type="text" placeholder="Wzrost" name="height" size="15">
+            <p class="BMI" style="display: inline"><b>[cm]</b></p><br><br>
+
+            <p class="BMI" style="display: inline"><b>Wiek: </b></p>
+            <input type="text" placeholder="Wiek" name="age" size="15">
+            <p class="BMI" style="display: inline"><b>[lata]</b></p><br><br>
+
+            <input style="margin-left:1.5em; height:35px; width:220px" type="submit" value="Oblicz BMI"><br>
+        </form>
+
+        <p class="contentBMI" style="font-size:10px;line-height: 1">*Separatorem w programie jest kropka. Wartości liczbowe dla
+        masy ciała i wzrostu można podawać do części setnych i odpowiednio z przedziału 0 - 500 kg oraz 19 - 300 cm.
+        Wiek należy podać jako liczbę całkowitą z przedziału 19 - 300 lat. </p>
+
+    </div>
+</div>
+    <div id="footer" class="footer">
+        <br><br><p class="footer"><b>Copyright 2019©. Wszelkie prawa zastrzeżone.</b></p>
+    </div>
+
+</body>
+</html>

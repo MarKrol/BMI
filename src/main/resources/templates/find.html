@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI - Body Mass Index</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+
+</head>
+
+<body>
+
+<br>
+<div id="header" class="header" >
+    <br><h2 class="header">B</h2>
+    <p class="header">ody</p>
+    <h2 class="header">&nbsp;M</h2>
+    <p class="header">ass</p>
+    <h2 class="header">&nbsp;I</h2>
+    <p class="header">ndex</p>
+</div>
+<div id="nav_content">
+    <div id="nav">
+        <h1 class="nav">Main Menu</h1><hr class="nav">
+        <p class="nav"><a href="calculator" id="calculator">Oblicz BMI</a></p><hr class="nav">
+        <p class="nav"><a href="find" id="find">Wyszukaj BMI</a></p><hr class="nav">
+        <p class="nav"><a th:href="index" id="index">Strona główna</a></p><hr class="nav">
+    </div>
+    <div id="content">
+        <h1 class="content">Znajdź swój wynik</h1><hr class="nav">
+
+        <p class="contentBMI"><b>Wprowadź ID, aby wyszukać dane.</b></p>
+
+        <form action="/find" method="post">
+            <input style="margin-left:1.5em;" type="text" placeholder="Podaj ID" name="id" size="15"><br><br>
+            <input style="margin-left:1.5em; height:35px; width:220px" type="submit" value="ZNAJDŹ"><br><br>
+        </form>
+
+    </div>
+</div>
+<div id="footer" class="footer">
+    <br><br><p class="footer"><b>Copyright 2019©. Wszelkie prawa zastrzeżone.</b></p>
+</div>
+
+</body>
+</html>

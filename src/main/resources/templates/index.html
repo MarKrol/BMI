@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI - Body Mass Index</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+
+
+</head>
+
+<body>
+
+    <br>
+    <div id="header" class="header">
+        <br><h2 class="header">B</h2>
+        <p class="header">ody</p>
+        <h2 class="header">&nbsp;M</h2>
+        <p class="header">ass</p>
+        <h2 class="header">&nbsp;I</h2>
+        <p class="header">ndex</p>
+    </div>
+    <div id="nav_content">
+    <div id="nav">
+        <h1 class="nav">Main Menu</h1><hr class="nav">
+        <p class="nav"><a href="./calculator" id="calculator">Oblicz BMI</a></p><hr class="nav">
+        <p class="nav"><a href="./find" id="find">Wyszukaj BMI</a></p><hr class="nav">
+        <p class="nav"><a href="./index" id="index">Strona główna</a></p><hr class="nav">
+    </div>
+    <div id="content">
+        <h1 class="content">Body Mass Index</h1><hr class="nav">
+        <p class="content">BMI jest wskaźnikiem masy ciała, dzięki któremu możemy ocenić, czy nasza masa ciała
+            utrzymuje się na odpowiednim poziomie. Wskaźnik ten pozwala określić nasz stan fizyczny, ale niestety
+            nie jest on wystarczający do pełnego określenia. Wskaźnik ten jest wykorzystywany głównie do oceny
+            ryzyka wystąpienia chorób, które zagrażają naszemu zdrowiu. Obliczone BMI obrazuje tylko przybliżoną
+            zawartość tłuszczu w organiźmie.
+            <br>Wygłodzenie < 16.0
+            <br>Wychudzenie 16.0 - 16.9<br>Niska masa 17.0 - 18.49<br>Masa w normie 18.5 - 24.9<br>
+            Zbyt duża masa 25.0 - 29.9<br>Otyłość stopnia I 30.0 - 34.9<br>Otyłość stopnia II 35.0 - 40.0<br>
+            Otyłość stopnia III > 40.0<br></p>
+    </div>
+    </div>
+    <div id="footer" class="footer">
+        <br><br><p class="footer"><b>Copyright 2019©. Wszelkie prawa zastrzeżone.</b></p>
+    </div>
+
+</body>
+</html>
