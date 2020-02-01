@@ -107,7 +107,7 @@ public class Service {
                 return "wychudzenie!!!";
             } else{
                 if (17.0<=Double.parseDouble(bmi) && Double.parseDouble(bmi) < 18.5){
-                    return "nieodwagę!!!";
+                    return "niedowagę!!!";
                 } else{
                     if (18.5<=Double.parseDouble(bmi) && Double.parseDouble(bmi) < 25.0){
                         return "wartość prawidłową. Brawo!!!";
